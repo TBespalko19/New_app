@@ -15,13 +15,16 @@
 print "Какую сумму будем откладывать в месяц: "
 x = gets.to_f
 
-print "Сколько месяцев: "
+print "Сколько лет будем откладывать: "
 n = gets.to_i
 
 s = 0
 
-1.upto(n) do |mm|
-	s = s + x
-	puts "Накопления за #{mm} месяц: #{x}: #{s}"
+n.times do |n|
 
+	1.upto(12) do |mm|
+		s = s + x
+		puts "Год #{n} меcяц #{mm}, отложено: #{s}"
+
+	end
 end
