@@ -10,11 +10,14 @@ elsif s =="P"
 else
 	puts "Can't undersyand what you want? sorry..."
 	exit
-end
+endcd a
 
 arr = [:rock, :scissors, :paper]
 
 computer_choice = arr[rand(0..2)]
+
+puts "User choise: #{user_choise}"
+puts "Computer choise: #{computer_choice}"
 
 matrix = [
 [:rock, :paper, :second_win],
@@ -39,7 +42,7 @@ matrix.each do |item|
 		elsif item[2] == :draw
 			puts "Draw!"
 		end
-		
+
 		exit
 	end
 
