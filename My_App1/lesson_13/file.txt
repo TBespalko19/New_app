@@ -1,0 +1,8 @@
+==================================================
+Name: Mike, age: 65
+Name: lidia, age: 42
+Name: Tania, age: 30
+Name: Walt, age: 50
+Name: Jessie, age: 55
+Name: Anna, age: 29
+==================================================
