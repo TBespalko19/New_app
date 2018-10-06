@@ -1,4 +1,4 @@
-input = File.open "passwords.txt", "r"
+input = File.open "password.txt", "r"
 
 while (line = input.gets)
 	line.strip!
