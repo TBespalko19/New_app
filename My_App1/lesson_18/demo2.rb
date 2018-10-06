@@ -1,4 +1,4 @@
-def is_password_weak password
+def is_password_weak? password
 
 	input = File.open "password.txt", "r"
 
