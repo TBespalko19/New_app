@@ -8,7 +8,8 @@ get '/' do
 end
 
 get '/about' do
-  erb :about
+#	@error = "something wrong!!!"
+	erb :about
 end
 
 get '/visit' do
@@ -21,5 +22,45 @@ post '/visit' do
 	@datetime = params[:datetime]
 	@barber = params[:barber]
 	@color = params[:color]
+
+	# if @username == ''
+	# 	@error = 'Введите имя'
+	# end
+
+	# if @phone == ''
+	# 	@error = 'Введите номер телефона'
+	# end
+
+	# if @datetime == ''
+	# 	@error = 'Неправильная дата и время'
+	# end
+
+	# if @error != ''
+	# 	return erb :visit
+	# end
+
+		 hh = { :username => 'Введите имя',
+		        :phone => 'Введите номер телефона',
+		        :datetime => 'Неправильная дата и время' }
+
+		#     #для каждой пары ключ-значение
+		# hh.each do |key, value|
+
+		# 	#если параметр пуст
+		# 	if params[key] == ''
+		# 	#переменной error присвоить value из хеша hh
+		# 		@error == hh[key]
+
+		# 	#вернуть представление visit
+		# 	return erb :visit
+		# 	end
+
+		@error = hh.select {|key,_| params[key] == ""}.values.join(", ")
+		
+		if @error != ''
+		 	return erb :visit
+		end
+
 	erb "OK!, username is #{@username}, your phone: #{@phone}, #{@datetime}, #{@barber}, #{@color}"
+	end
 end
