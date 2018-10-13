@@ -1,0 +1,11 @@
+CREATE TABLE "Cars" ("Id" INTEGER PRIMARY KEY AUTOINCREMENT, "Name" VARCHAR, "Price" INTERGER);
+
+
+INSERT INTO Cars ( name, price )
+VALUES ( 'Toyota', 8000 );
+
+INSERT INTO Cars ( name, price )
+VALUES ( 'BMW', 10000 );
+
+INSERT INTO Cars ( name, price )
+VALUES ( 'Audi', 9000 );

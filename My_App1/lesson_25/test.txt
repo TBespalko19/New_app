@@ -1,0 +1,10 @@
+require 'sqlite3'
+
+db = SQLite3::Database.new 'test.db'
+db.execute "CREATE TABLE Cars1 (Id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, Price INTERGER)"
+db.execute "INSERT INTO Cars1 VALUES (1, 'Toyota', 50000 )"
+db.execute "INSERT INTO Cars1 VALUES (2, 'Audi', 52645 )"
+db.execute "INSERT INTO Cars1 VALUES (3, 'Mercedes', 57127 )"
+db.execute "INSERT INTO Cars1 VALUES (4, 'Skoda', 9000 )"
+
+db.close
