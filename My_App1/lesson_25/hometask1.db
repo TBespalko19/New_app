@@ -1,0 +1,6 @@
+require 'sqlite3'
+
+db = SQLite3::Database.new 'hometask1.db'
+db.execute "CREATE TABLE Users  (Id INTEGER PRIMARY KEY AUTOINCREMENT, Name VARCHAR, Phone VARCHAR, DateStamp VARCHAR, Barber VARCHAR, Color VARCHAR )"
+db.execute "INSERT INTO Users  VALUES (1, 'Tania', 50000, 15, 15, 15 )"
+db.close
