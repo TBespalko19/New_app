@@ -1,0 +1,3 @@
+CREATE TABLE "Posts" ("id" INTERGER PRIMARY AUTOINCREMENT, "created_date" DATE, "content" TEXT)
+
+insert into Posts (content, created_date) values ('Something', datetime());
