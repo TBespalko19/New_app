@@ -1,4 +1,3 @@
-#encoding: utf-8
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
@@ -10,6 +9,7 @@ class Product < ActiveRecord::Base
 end
 
 get '/' do
+	@products = Product.all
 	erb :index
 end
 
