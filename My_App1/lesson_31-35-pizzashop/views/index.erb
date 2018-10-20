@@ -5,10 +5,33 @@
 	<% @products.each do |p| %>
 
 	<div class="col-md-3">
-		<%= p.title %>
+		<div>
+			<%= p.title %>
+		</div>
+
+		<div>
+			<img src="<%= p.path_to_image %>"  width="150" height="150"/>
+		</div>
+
+		<div>
+			<%= p.description %> 
+		</div>
+
+		<div>
+			Size: <%= p.size %> sm.
+		</div>
+
+		<div>
+			Price: <%= p.price %> uah
+		</div>
+
+		<div>
+			<button class="btn btn-sm btn-success" onclick="add_to_cart(<%= p.id %>)">Add to Cart!</button>
+		</div>
+
 	</div>
 
 	<% end %>
 </div>
-
+<br />
 <button class="btn btn-info" onclick="something()" >Click me!</button>
